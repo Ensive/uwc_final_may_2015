@@ -1,0 +1,7 @@
+{
+  "name": "agoncharuk-uwc-final",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

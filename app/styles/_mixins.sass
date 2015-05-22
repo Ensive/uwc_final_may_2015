@@ -1,0 +1,39 @@
+// ==================== VARIABLES ==================== //
+
+// colors
+//$pf_text: #303334
+//$pf_yellow: #E9DF4A
+
+// fonts
+//$ubuntu-medium: 'Ubuntu Medium'
+//$ubuntu-light: 'Ubuntu Light'
+
+// ==================== GENERAL MIXINS ==================== //
+
+@mixin user-select-none
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+@mixin appearance-none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+// ==================== CUSTOM MIXINS ==================== //
+
+@mixin container
+  max-width: 1170px
+  margin: 0 auto
+
+@mixin cf
+  &::before
+    content: ''
+    display: table
+  &::after
+    content: ''
+    display: table
+    clear: both
