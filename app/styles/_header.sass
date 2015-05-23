@@ -1,0 +1,71 @@
+.header
+  height: 44px
+  background-color: #363636
+
+  &__nav
+    width: 70.833333333333%
+    float: left
+    height: 44px
+
+  &__nav-item
+    display: block
+    float: left
+    // width: 120px
+    // width: 14.117647058824%
+    padding: 16px 27px 0
+    height: 44px
+    font-family: $roboto-medium
+    font-size: 1.4em
+    font-size: 1.4rem
+    text-align: center
+    text-decoration: none
+    color: #C6C6C6
+    // transition: background-color 0.2s ease
+    &:hover,
+    &.active
+      // background-color: #000
+      background: #000 url('../images/background.jpg') center center repeat
+      color: #FFF
+
+  // menu
+  &__menu
+    width: 29.166666666667%
+    float: right
+
+  &__menu-item
+    display: block
+    // width: 33.33333333333333%
+    height: 44px
+    padding: 16px 24px 0
+    float: left
+    font-family: $roboto-regular
+    font-size: 1.3em
+    font-size: 1.3rem
+    text-align: center
+    text-decoration: none
+    color: #8B8B8B
+    transition: background-color 0.2s ease
+
+    &:hover,
+    &.active
+      color: #FFF
+      background-color: #7B872B
+
+    &::before
+      content: ''
+      margin-right: 5px
+      font-family: $font-awesome
+      font-size: 1.5em
+      font-size: 1.5rem
+
+    &--save::before
+      content: '\e802'
+    &--help::before
+      content: '\e801'
+    &--exit::before
+      content: '\e800'
+
+
+
+
+

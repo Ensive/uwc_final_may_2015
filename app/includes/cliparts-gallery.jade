@@ -1,0 +1,6 @@
+.gallery
+  span.gallery__tip Выберите подходящие клипарты в галерее с помощью табов и тагов. Сохраните перетащите их в первый ряд, чтобы всегда иметь под рукой.
+  nav.gallery__tabs
+    -var tabs = [{ text: 'Рода войск', link: '#voyska' }, { text: 'Техника и вооружение', link: '#tech-and-armory' }, { text: 'Обмундирование и экипировка', link: '#equipment' }, { text: 'Эмблемы и знаки', link: '#emblems' }, { text: 'Флаги и знамена', link: '#flags' }, { text: 'Надписи и украшения ', link: '#signs' }, { text: 'Рамки', link: '#frames' }, { text: 'Разное', link: '#other' }]
+    for tab in tabs
+      a(href="#{ tab.link }")= tab.text

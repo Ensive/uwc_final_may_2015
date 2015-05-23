@@ -11,7 +11,24 @@
 *::before
   box-sizing: border-box
 
-body
-  color: red
+html
+  font-size: 62.5%
+  background: #fff url('../images/bg.jpg') center center repeat
 
+body
+  overflow-x: hidden
+
+.wrapper
+  width: 100%
+  height: 100%
+  padding: 0 25px
+  background: #000 url('../images/background.jpg') center center repeat
+  @include cf()
+
+.container
+  @include container
+
+@import header
+@import top-panel
+@import cliparts-gallery
 @import responsive

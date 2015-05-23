@@ -1,0 +1,13 @@
+section
+  h2.hidden Top user panel
+  .top-panel.container
+    .cliparts
+      -var cliparts = [{ name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, ]
+      each clipart, index in cliparts
+        .cliparts__item-wrapper
+          span.cliparts__item-text Добавить клипарт
+          .cliparts__item
+            span.cliparts__item-price= clipart.price
+            //- img(src="images/cliparts/#{ clipart.name + '-' + ( index + 1) }.jpg" alt="#{ clipart.name.charAt(0).toUpperCase() + clipart.name.slice(1) } image #{ index + 1}")
+    button.top-panel__open-btn Открыть коллекцию клипартов
+

@@ -1,13 +1,16 @@
 extends layouts/default
 
-//- h1 of the current page
-//block h1
-//  h1.hidden Title
-
 //- content of the page
 block content
+  h1.hidden Cliparts gallery
+
   include ./includes/header
 
   main(role='main')
+    .wrapper.container
+      include ./includes/top-panel
+      section
+        h2.hidden Cliparts gallery
+        include ./includes/cliparts-gallery
 
   include ./includes/footer

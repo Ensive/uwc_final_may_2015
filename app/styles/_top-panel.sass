@@ -1,0 +1,84 @@
+.top-panel
+  position: relative
+  // background: #000 url('../images/bg-cliparts.jpg') center center no-repeat
+  @include cf()
+
+  &__open-btn
+    position: absolute
+    left: 50%
+    bottom: -25px
+    width: 246px
+    height: 25px
+    border: 0
+    margin-left: -123px
+    font-family: $roboto-regular
+    color: #898989
+    font-size: 1.3em
+    font-size: 1.3rem
+    text-shadow: 0 -1px 0 #000
+    box-shadow: 0 1px 7px #000
+    border-bottom-left-radius: 13px
+    border-bottom-right-radius: 13px
+    &::after
+      font-family: $font-awesome
+      content: '\e804'
+      margin-left: 4px
+
+    &:hover
+      cursor: pointer
+
+.cliparts
+  max-width: 1150px
+  margin: 5px auto 0
+  // padding: 0 25px
+  @include cf()
+  overflow-x: scroll
+
+  &__item-wrapper
+    // width: 10.434782608696%
+    width: 10.347826086957%
+    // min-height: 1px
+    // height: 100%
+    height: 119px
+    // margin-right: 0.869565217391%
+    margin-right: 0.782608695652%
+    display: block
+    float: left
+    text-align: center
+    border: 1px dashed #898989
+
+    &:last-child
+      margin-right: 0
+
+    &:hover
+      cursor: pointer
+
+    &::before
+      content: '\e803'
+      display: block
+      margin: 37px 0 0 0
+      font-family: $font-awesome
+      font-size: 43px
+      font-size: 4.3em
+      font-size: 4.3rem
+      color: #898989
+      text-shadow: 0 -1px 0 #000
+
+  &__item
+
+    &-text
+      display: block
+      margin-top: 12px
+      font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+      font-size: 1.3em
+      font-size: 1.3rem
+      font-weight: 400
+      color: #898989
+      text-shadow: 0 -1px 0 #000
+
+    &-price
+      display: none
+
+
+
+

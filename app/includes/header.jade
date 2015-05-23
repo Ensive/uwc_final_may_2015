@@ -1,2 +1,15 @@
-header.header
-  h1.hello Hello UWC
+header.header.container
+  // navigation
+  -var navigation = [{ text: 'Мои фотографии', link: '#my-photos' }, { text: 'Клипарты', link: '#cliparts'}, { text: 'Шаблоны', link: '#templates' }, { text: 'Фоны', link: '#backgrounds'}, { text: 'Фотоматериалы', link: '#photo-materials'}]
+  nav.header__nav(role="navigation")
+    h2.hidden Main navigation
+    for navItem in navigation
+      a.header__nav-item(href="#{ navItem.link }")= navItem.text
+
+  // menu
+  -var menu = [{ text: 'Сохранить', link: '#save', icon: 'save'}, { text: 'Помощь', link: '#help', icon: 'help'}, { text: 'Выход', link: '#exit', icon: 'exit'}]
+  .header__menu(role="menu")
+      for menuItem in menu
+        a.header__menu-item(href="#{ menuItem.link }" class="header__menu-item--#{menuItem.icon}")= menuItem.text
+
+
