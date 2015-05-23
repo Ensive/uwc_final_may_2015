@@ -21,14 +21,68 @@ body
 .wrapper
   width: 100%
   height: 100%
-  padding: 0 25px
-  background: #000 url('../images/background.jpg') center center repeat
+  // padding: 0 25px
+  background: #000 url('../images/bg-general.jpg') center center repeat
   @include cf()
 
 .container
   @include container
+  @include cf()
+
+// drag and drop clipart items
+.cliparts-item
+  position: relative
+  display: block
+  float: left
+  width: 10.338835794961%
+  // margin-right: 0.868809730669%
+  margin-right: 0.739130434783%
+  overflow: hidden
+  &:last-child
+    margin-right: 0
+  &:hover
+    cursor: pointer
+
+  &-price
+    position: absolute
+    bottom: 7px
+    left: 50%
+    width: 106px
+    height: 30px
+    margin-left: -53px
+    font-family: $roboto-regular
+    font-size: 1.3em
+    font-size: 1.3rem
+    line-height: 30px
+    text-align: center
+    color: #FFF
+    background-color: rgba(0, 0, 0, 0.72)
+    border-radius: 16px
+    transform: translateY(50px)
+    transition: transform .3s linear
+    &::before
+      content: '\e807'
+      display: block
+      float: left
+      width: 28px
+      height: 28px
+      margin: 1px 0 1px 2px
+      font-family: $font-awesome
+      font-size: 1.6em
+      font-size: 1.6rem
+      line-height: 28px
+      text-align: center
+      color: #0A0A0A
+      background-color: #FFD200
+      border-radius: 100%
+
+  &:hover &-price
+      transform: translateY(0px)
 
 @import header
 @import top-panel
 @import cliparts-gallery
+@import footer
+
+// responsive
 @import responsive

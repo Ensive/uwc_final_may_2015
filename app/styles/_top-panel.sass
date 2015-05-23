@@ -1,6 +1,6 @@
 .top-panel
   position: relative
-  // background: #000 url('../images/bg-cliparts.jpg') center center no-repeat
+  // padding-bottom: 10px
   @include cf()
 
   &__open-btn
@@ -19,6 +19,7 @@
     box-shadow: 0 1px 7px #000
     border-bottom-left-radius: 13px
     border-bottom-right-radius: 13px
+    background: #000 url('../images/background.jpg') center center no-repeat
     &::after
       font-family: $font-awesome
       content: '\e804'
@@ -31,21 +32,26 @@
   max-width: 1150px
   margin: 5px auto 0
   // padding: 0 25px
+  max-height: 155px
   @include cf()
   overflow-x: scroll
 
   &__item-wrapper
-    // width: 10.434782608696%
+    position: relative
     width: 10.347826086957%
     // min-height: 1px
     // height: 100%
     height: 119px
     // margin-right: 0.869565217391%
     margin-right: 0.782608695652%
+    margin-bottom: 10px
     display: block
     float: left
     text-align: center
     border: 1px dashed #898989
+
+    &.ui-state-highlight
+      border: 0
 
     &:last-child
       margin-right: 0
@@ -64,21 +70,20 @@
       color: #898989
       text-shadow: 0 -1px 0 #000
 
-  &__item
-
     &-text
       display: block
       margin-top: 12px
-      font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif
+      font-family: $roboto-regular
       font-size: 1.3em
       font-size: 1.3rem
-      font-weight: 400
       color: #898989
       text-shadow: 0 -1px 0 #000
 
-    &-price
-      display: none
-
+    .cliparts-item
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
 
 
 

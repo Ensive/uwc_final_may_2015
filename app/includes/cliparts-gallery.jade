@@ -1,6 +1,29 @@
 .gallery
   span.gallery__tip Выберите подходящие клипарты в галерее с помощью табов и тагов. Сохраните перетащите их в первый ряд, чтобы всегда иметь под рукой.
-  nav.gallery__tabs
-    -var tabs = [{ text: 'Рода войск', link: '#voyska' }, { text: 'Техника и вооружение', link: '#tech-and-armory' }, { text: 'Обмундирование и экипировка', link: '#equipment' }, { text: 'Эмблемы и знаки', link: '#emblems' }, { text: 'Флаги и знамена', link: '#flags' }, { text: 'Надписи и украшения ', link: '#signs' }, { text: 'Рамки', link: '#frames' }, { text: 'Разное', link: '#other' }]
-    for tab in tabs
-      a(href="#{ tab.link }")= tab.text
+
+  div(id="tabs")
+    ul.gallery__tabs
+      -var tabs = [{ text: 'Рода войск', link: '#voyska' }, { text: 'Техника и вооружение', link: '#tech-and-armory' }, { text: 'Обмундирование и экипировка', link: '#equipment' }, { text: 'Эмблемы и знаки', link: '#emblems' }, { text: 'Флаги и знамена', link: '#flags' }, { text: 'Надписи и украшения ', link: '#signs' }, { text: 'Рамки', link: '#frames' }, { text: 'Разное', link: '#other' }]
+      for tab in tabs
+        li.gallery__tabs-item
+          a.gallery__tabs-link(href="#{ tab.link }")= tab.text
+
+    -var blocks = [{ name: 'voyska' }, { name: 'tech-and-armory' }, { name: 'equipment' }, { name: 'emblems' }, { name: 'flags' }, { name: 'signs' }, { name: 'frames' }, { name: 'other' }]
+      each block in blocks
+        .gallery-content(id="#{ block.name }")
+          .gallery-content__tags
+            span.gallery-content__tags-text Тэги:
+            -var tags = ['Флаги', 'Знамена', 'Вымпелы', 'Ленты', 'Полоски', 'Квадраты', 'Круги', 'Треугольники', 'Параллелепипеды']
+            each tag, index in tags
+              a.gallery-content__tags-link(href="#tag-#{ index + 1 }")= tag
+
+          .gallery-content__collections-wrapper
+            .gallery-content__collections
+              -var cliparts = [{ name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }, { name: 'clipart', price: 250 }]
+              each collection, index in tags
+                .gallery-content__collections-row(class="tag-#{ index + 1 }")
+                  span.gallery-content__collections-row__name= collection
+                  each clipart, index in cliparts
+                    .cliparts-item
+                      img(src="images/cliparts/#{ clipart.name }-image-1.jpg" alt="#{ clipart.name.charAt(0).toUpperCase() + clipart.name.slice(1) } image #{ index + 1}")
+                      span.cliparts-item-price= clipart.price + ' руб.'
